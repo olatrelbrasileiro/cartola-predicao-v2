@@ -1,0 +1,25 @@
+temporada,rodada,partida_id,mandante,visitante,placar,clube_afetado,clube_afetado_id,n_atletas_no_payload,n_entrou_em_campo,n_scout_nao_vazio,existe_atleta_no_payload,scouts_no_payload,n_atletas_adversario,clubes_com_elenco_completo_na_rodada,diagnostico,elenco_no_payload
+2026,2,346262,CAP,COR,0x1,COR,264,1,0,0,sim,(nenhum),1,18/20,elenco ausente do payload,40990/Dorival Júnior pos=6 entrou=False scout=None
+2026,2,346262,CAP,COR,0x1,CAP,293,1,0,0,sim,(nenhum),1,18/20,elenco ausente do payload,92273/Odair Hellmann pos=6 entrou=False scout=None
+2026,3,346299,VIT,FLA,1x2,FLA,262,1,0,0,sim,(nenhum),1,18/20,elenco ausente do payload,139076/Filipe Luís pos=6 entrou=False scout=None
+2026,3,346299,VIT,FLA,1x2,VIT,287,1,0,0,sim,(nenhum),1,18/20,elenco ausente do payload,92180/Jair Ventura pos=6 entrou=False scout=None
+2026,4,346335,FLA,MIR,2x0,FLA,262,1,0,0,sim,(nenhum),1,14/20,elenco ausente do payload,88963/Leonardo Jardim pos=6 entrou=False scout=None
+2026,4,346335,FLA,MIR,2x0,MIR,2305,1,0,0,sim,(nenhum),1,14/20,elenco ausente do payload,104027/Rafael Guanaes pos=6 entrou=False scout=None
+2026,4,346337,BOT,VIT,0x0,BOT,263,1,0,0,sim,(nenhum),1,14/20,elenco ausente do payload,117965/Martín Anselmi pos=6 entrou=False scout=None
+2026,4,346337,BOT,VIT,0x0,VIT,287,1,0,0,sim,(nenhum),1,14/20,elenco ausente do payload,92180/Jair Ventura pos=6 entrou=False scout=None
+2026,4,346349,BAH,CHA,2x0,BAH,265,1,0,0,sim,(nenhum),1,14/20,elenco ausente do payload,97341/Rogério Ceni pos=6 entrou=False scout=None
+2026,4,346349,BAH,CHA,2x0,CHA,315,1,0,0,sim,(nenhum),1,14/20,elenco ausente do payload,73481/Gilmar Dal Pozzo pos=6 entrou=False scout=None
+2026,5,346405,MIR,SAN,2x2,SAN,277,1,0,0,sim,(nenhum),1,16/20,elenco ausente do payload,104754/Juan Vojvoda pos=6 entrou=False scout=None
+2026,5,346405,MIR,SAN,2x2,MIR,2305,1,0,0,sim,(nenhum),1,16/20,elenco ausente do payload,104027/Rafael Guanaes pos=6 entrou=False scout=None
+2026,5,346408,CAP,BOT,4x1,BOT,263,1,0,0,sim,(nenhum),1,16/20,elenco ausente do payload,117965/Martín Anselmi pos=6 entrou=False scout=None
+2026,5,346408,CAP,BOT,4x1,CAP,293,1,0,0,sim,(nenhum),1,16/20,elenco ausente do payload,92273/Odair Hellmann pos=6 entrou=False scout=None
+2026,19,346535,FLU,RBB,1x1,FLU,266,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,99366/Luis Zubeldía pos=6 entrou=False scout=None
+2026,19,346535,FLU,RBB,1x1,RBB,280,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,39850/Vagner Mancini pos=6 entrou=False scout=None
+2026,19,346536,BOT,SAN,2x1,BOT,263,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,149990/Franclim Carvalho pos=6 entrou=False scout=None
+2026,19,346536,BOT,SAN,2x1,SAN,277,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,42411/Cuca pos=6 entrou=False scout=None
+2026,19,346539,MIR,GRE,2x1,GRE,284,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,88037/Luís Castro pos=6 entrou=False scout=None
+2026,19,346539,MIR,GRE,2x1,MIR,2305,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,104027/Rafael Guanaes pos=6 entrou=False scout=None
+2026,19,346543,VIT,VAS,1x0,VAS,267,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,128177/Pedro Emanuel pos=6 entrou=False scout=None
+2026,19,346543,VIT,VAS,1x0,VIT,287,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,92180/Jair Ventura pos=6 entrou=False scout=None
+2026,21,346282,BOT,GRE,3x2,BOT,263,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,149990/Franclim Carvalho pos=6 entrou=False scout=None
+2026,21,346282,BOT,GRE,3x2,GRE,284,1,0,0,sim,(nenhum),1,12/20,elenco ausente do payload,88037/Luís Castro pos=6 entrou=False scout=None

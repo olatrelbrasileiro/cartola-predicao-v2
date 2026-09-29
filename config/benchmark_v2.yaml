@@ -1,0 +1,30 @@
+# Benchmark oficial que qualquer modelo da Etapa 6+ precisa superar.
+versao: benchmark_v2
+data: "2026-09-20"
+
+# Referencia oficial
+benchmark:
+  nome: B2S
+  especificacao: config/b2s_spec.yaml
+  artefatos:
+    folds: reports/baseline_b2s_folds.csv
+    summary: reports/baseline_b2s_summary.md
+  metricas_oficiais:
+    mae_global_ponderado: 1.4016
+    spearman_medio: 0.4617
+    rmse_agregado: 2.8899
+  folds: 76
+
+# Baselines anteriores (referencias historicas)
+referencias:
+  B0:  {mae: 2.0748, spearman: null}
+  B1:  {mae: 1.6012, spearman: 0.4553}
+  B2:  {mae: 1.5778, spearman: 0.4617}
+  B3:  {mae: 1.5339, spearman: 0.3454, status: diagnostico}
+
+# Criterio de sucesso para Etapa 6+
+criterio_sucesso:
+  mae: "Ridge precisa ter MAE global ponderado < 1.4016"
+  consistencia: "Ganho precisa aparecer na maioria dos folds (>= 39/76), nao so na media"
+  spearman: "Ridge nao pode regredir Spearman em relacao ao B2S"
+  reprodutibilidade: "Alpha do Ridge calibrado em inner walk-forward, sem contaminacao"

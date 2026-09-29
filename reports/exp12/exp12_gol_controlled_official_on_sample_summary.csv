@@ -1,0 +1,2 @@
+arm,n_folds,n_pooled,MAE_mean_folds,RMSE_mean_folds,Spearman_mean_folds,MAE_pooled,RMSE_pooled,Spearman_pooled
+Official_on_EXP12_sample,98,1850,3.317877366987851,4.110202492780852,0.05294245378349424,3.3177260166757687,4.158498436320044,0.059392495509884444

@@ -1,0 +1,321 @@
+{
+    "experimento": "EXP-12",
+    "modo": "cumulative",
+    "target_tier": 1,
+    "tiers_ativos": [
+        0,
+        1
+    ],
+    "nome_modelo": "EXP12_M2_Cumulative_T0_to_T1",
+    "temporada": 2026,
+    "n_folds": 25,
+    "n_predictions": 7884,
+    "mae_global": 2.7971125595486153,
+    "rmse_global": 3.9142066240212157,
+    "spearman_global": 0.27216471195682157,
+    "metricas_por_posicao": {
+        "1": {
+            "posicao_id": "1",
+            "n_predictions": 477,
+            "mae": 3.3967677949305495,
+            "rmse": 4.185367492879549,
+            "spearman": 0.005310632655404553
+        },
+        "2": {
+            "posicao_id": "2",
+            "n_predictions": 1164,
+            "mae": 3.2548288699059054,
+            "rmse": 4.12069359290681,
+            "spearman": 0.10795305881306913
+        },
+        "3": {
+            "posicao_id": "3",
+            "n_predictions": 1130,
+            "mae": 2.800746637508229,
+            "rmse": 3.6220082912657987,
+            "spearman": 0.056257701254865455
+        },
+        "4": {
+            "posicao_id": "4",
+            "n_predictions": 2578,
+            "mae": 2.521520287011175,
+            "rmse": 3.6727382508629094,
+            "spearman": 0.22150091336008307
+        },
+        "5": {
+            "posicao_id": "5",
+            "n_predictions": 2073,
+            "mae": 2.9260461870145034,
+            "rmse": 4.401197642868057,
+            "spearman": 0.303802490787513
+        },
+        "6": {
+            "posicao_id": "6",
+            "n_predictions": 462,
+            "mae": 1.9751940059497106,
+            "rmse": 2.512336384433162,
+            "spearman": 0.15435420963950047
+        }
+    },
+    "features_total": 16,
+    "features_historico": [
+        "posicao_id",
+        "hist_mean",
+        "hist_std",
+        "hist_n",
+        "rec_mean_5",
+        "rec_mean_3",
+        "rec_std_5",
+        "basic_mean",
+        "basic_rec_5"
+    ],
+    "features_contexto": [
+        "mando",
+        "rodada",
+        "team_games_played_season",
+        "opp_games_played_season",
+        "team_FTT_last5_mean",
+        "team_FA_last5_mean",
+        "team_G_last5_mean"
+    ],
+    "importancia_features": {
+        "posicao_id": 19.482021485618862,
+        "hist_mean": 5.443581992864409,
+        "hist_std": 6.651248871264877,
+        "hist_n": 4.169489690735009,
+        "rec_mean_5": 4.641874252545476,
+        "rec_mean_3": 8.42880638984117,
+        "rec_std_5": 6.044489565494493,
+        "basic_mean": 5.205359014307552,
+        "basic_rec_5": 4.637879128199501,
+        "mando": 7.600331355944985,
+        "rodada": 2.568552241148942,
+        "team_games_played_season": 2.6382088407833493,
+        "opp_games_played_season": 2.6064384773591867,
+        "team_FTT_last5_mean": 7.594403793093468,
+        "team_FA_last5_mean": 6.493564013720694,
+        "team_G_last5_mean": 5.793750887078025
+    },
+    "importancia_por_grupo": {
+        "historico": 64.70475039087135,
+        "tier_0": 15.413530915236464,
+        "tier_1": 19.88171869389219
+    },
+    "catboost_params": {
+        "loss_function": "MAE",
+        "iterations": 500,
+        "depth": 6,
+        "learning_rate": 0.05,
+        "l2_leaf_reg": 3,
+        "random_seed": 42,
+        "verbose": false
+    },
+    "hashes_insumos": {
+        "cartola_jogador_rodada_v2": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+        "team_context_features_v1": "794c5a2dff846fa82091fcdb1aa6b31dda7080b8aab36c22a71b2afcf83afdb7",
+        "team_scout_history": "9ea6027ae268f1d40ad2260cf4dddc79926bbc0d0058ed0d1e8f553f0873af0b"
+    },
+    "integridade": "APROVADA (10/10 verificações)",
+    "folds_detalhe": [
+        {
+            "rodada": 2,
+            "n_train": 335,
+            "n_test": 306,
+            "mae": 2.9755051800245456,
+            "rmse": 4.147898691846538,
+            "spearman": 0.0676609945019558
+        },
+        {
+            "rodada": 3,
+            "n_train": 641,
+            "n_test": 301,
+            "mae": 3.0603742988484077,
+            "rmse": 4.28466986328166,
+            "spearman": 0.136546742243692
+        },
+        {
+            "rodada": 4,
+            "n_train": 942,
+            "n_test": 235,
+            "mae": 2.695270480191163,
+            "rmse": 3.824350648810935,
+            "spearman": 0.2767977695158256
+        },
+        {
+            "rodada": 5,
+            "n_train": 1177,
+            "n_test": 272,
+            "mae": 2.993923699328545,
+            "rmse": 4.109990988967495,
+            "spearman": 0.16514934236413842
+        },
+        {
+            "rodada": 6,
+            "n_train": 1449,
+            "n_test": 336,
+            "mae": 2.7052864957164577,
+            "rmse": 3.587876282793419,
+            "spearman": 0.2084720917662945
+        },
+        {
+            "rodada": 7,
+            "n_train": 1785,
+            "n_test": 334,
+            "mae": 2.6101606250004545,
+            "rmse": 3.5385104722248664,
+            "spearman": 0.3176084291021965
+        },
+        {
+            "rodada": 8,
+            "n_train": 2119,
+            "n_test": 333,
+            "mae": 2.6442465468761767,
+            "rmse": 3.6851056243751343,
+            "spearman": 0.271948715268111
+        },
+        {
+            "rodada": 9,
+            "n_train": 2452,
+            "n_test": 342,
+            "mae": 2.8898889114043738,
+            "rmse": 4.104238369422756,
+            "spearman": 0.30692234254799844
+        },
+        {
+            "rodada": 10,
+            "n_train": 2794,
+            "n_test": 334,
+            "mae": 2.579947046349469,
+            "rmse": 3.5276576305339056,
+            "spearman": 0.27038386007005777
+        },
+        {
+            "rodada": 11,
+            "n_train": 3128,
+            "n_test": 332,
+            "mae": 2.5749158719125456,
+            "rmse": 3.4375899928215268,
+            "spearman": 0.3653834990106521
+        },
+        {
+            "rodada": 12,
+            "n_train": 3460,
+            "n_test": 339,
+            "mae": 2.7524894433278733,
+            "rmse": 3.9367606736558693,
+            "spearman": 0.3517090323476409
+        },
+        {
+            "rodada": 13,
+            "n_train": 3799,
+            "n_test": 333,
+            "mae": 2.7403443714348477,
+            "rmse": 3.843405536984618,
+            "spearman": 0.33452425872398994
+        },
+        {
+            "rodada": 14,
+            "n_train": 4132,
+            "n_test": 335,
+            "mae": 2.939930209555318,
+            "rmse": 4.017723682937897,
+            "spearman": 0.19487705567221872
+        },
+        {
+            "rodada": 15,
+            "n_train": 4467,
+            "n_test": 333,
+            "mae": 2.5798555411966637,
+            "rmse": 3.568917126184564,
+            "spearman": 0.31568382842042136
+        },
+        {
+            "rodada": 16,
+            "n_train": 4800,
+            "n_test": 333,
+            "mae": 2.7573038743751606,
+            "rmse": 4.1046901023907605,
+            "spearman": 0.24818911657608733
+        },
+        {
+            "rodada": 17,
+            "n_train": 5133,
+            "n_test": 333,
+            "mae": 3.003223781252178,
+            "rmse": 4.081795472480135,
+            "spearman": 0.22661869559130846
+        },
+        {
+            "rodada": 18,
+            "n_train": 5466,
+            "n_test": 338,
+            "mae": 2.9010052611469512,
+            "rmse": 4.2346373222436275,
+            "spearman": 0.3808621312017329
+        },
+        {
+            "rodada": 19,
+            "n_train": 5804,
+            "n_test": 201,
+            "mae": 2.9347383539851517,
+            "rmse": 4.540395304166363,
+            "spearman": 0.2869100946573941
+        },
+        {
+            "rodada": 20,
+            "n_train": 6005,
+            "n_test": 336,
+            "mae": 2.632292420751226,
+            "rmse": 3.68323598035912,
+            "spearman": 0.23834795712434184
+        },
+        {
+            "rodada": 21,
+            "n_train": 6341,
+            "n_test": 204,
+            "mae": 2.74983189159751,
+            "rmse": 3.794975338096136,
+            "spearman": 0.3611503757447271
+        },
+        {
+            "rodada": 22,
+            "n_train": 6545,
+            "n_test": 333,
+            "mae": 2.5534711970258352,
+            "rmse": 3.5382394526177072,
+            "spearman": 0.30116153209350355
+        },
+        {
+            "rodada": 23,
+            "n_train": 6878,
+            "n_test": 336,
+            "mae": 2.8784391348266505,
+            "rmse": 4.123902539045384,
+            "spearman": 0.24274116791919623
+        },
+        {
+            "rodada": 24,
+            "n_train": 7214,
+            "n_test": 337,
+            "mae": 2.908146930920132,
+            "rmse": 3.9684615958542855,
+            "spearman": 0.34646350556422956
+        },
+        {
+            "rodada": 25,
+            "n_train": 7551,
+            "n_test": 329,
+            "mae": 3.0012249203473345,
+            "rmse": 4.167314427563509,
+            "spearman": 0.23942876269976263
+        },
+        {
+            "rodada": 26,
+            "n_train": 7880,
+            "n_test": 339,
+            "mae": 2.9445457772253802,
+            "rmse": 4.0326912601192255,
+            "spearman": 0.3382102317582653
+        }
+    ]
+}

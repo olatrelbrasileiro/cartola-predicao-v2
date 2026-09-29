@@ -1,0 +1,39 @@
+# Configuração mínima do projeto cartola-predicao-v2.
+# Apenas caminhos, seed e definição do alvo. Nada de hiperparâmetros de modelo
+# aqui ainda.
+
+project:
+  name: cartola-predicao-v2
+  seed: 42
+
+paths:
+  data_raw: data/raw
+  data_interim: data/interim
+  data_processed: data/processed
+  experiments: experiments
+  models: models
+  reports: reports
+  scripts: scripts
+
+target:
+  # alvo principal: pontuação do jogador na rodada
+  name: pontuacao
+  # regra explícita: "não participou" NÃO é 0
+  nao_participou_e_zero: false
+
+validation:
+  scheme: walk_forward_expansive
+  # mínimo de rodadas de treino antes do primeiro fold de teste
+  min_train_rounds: 9
+
+metrics:
+  primary: mae
+  secondary: spearman
+  diagnostic: rmse
+
+feature_groups_initial:
+  - confronto        # odds Bzorro + mando de campo
+  - historico        # pontuações e scouts de todas as participações
+  - recente          # últimas 5 participações/rodadas válidas
+  - basico           # média/componente sem G/A/SG
+  - participacao_gols # G+A por jogo

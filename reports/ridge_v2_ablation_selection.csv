@@ -1,0 +1,14 @@
+experimento,n_features,features,alpha_median,alpha_min,alpha_max,alpha_distinct
+HIST,4,hist_mean|hist_std|hist_n|hist_shrunk_k7,1000.0,1000.0,1000.0,1
+REC,4,rec_mean_5|rec_mean_3|rec_std_5|momentum,1000.0,1000.0,1000.0,1
+BASIC,2,basic_mean|basic_rec_5,100.0,10.0,1000.0,5
+GA,3,ga_per_game|ga_rec_5|ga_shrunk_k7,10.0,0.1,30.0,5
+OPP,2,entrou_rate|is_cold_start,0.1,0.1,0.1,1
+POS,6,posicao_1|posicao_2|posicao_3|posicao_4|posicao_5|posicao_6,10.0,10.0,30.0,2
+FULL_MINUS_HIST,17,rec_mean_5|rec_mean_3|rec_std_5|momentum|basic_mean|basic_rec_5|ga_per_game|ga_rec_5|ga_shrunk_k7|entrou_rate|is_cold_start|posicao_1|posicao_2|posicao_3|posicao_4|posicao_5|posicao_6,1000.0,0.1,1000.0,2
+FULL_MINUS_REC,17,hist_mean|hist_std|hist_n|hist_shrunk_k7|basic_mean|basic_rec_5|ga_per_game|ga_rec_5|ga_shrunk_k7|entrou_rate|is_cold_start|posicao_1|posicao_2|posicao_3|posicao_4|posicao_5|posicao_6,1000.0,1000.0,1000.0,1
+FULL_MINUS_BASIC,19,hist_mean|hist_std|hist_n|hist_shrunk_k7|rec_mean_5|rec_mean_3|rec_std_5|momentum|ga_per_game|ga_rec_5|ga_shrunk_k7|entrou_rate|is_cold_start|posicao_1|posicao_2|posicao_3|posicao_4|posicao_5|posicao_6,1000.0,0.1,1000.0,2
+FULL_MINUS_GA,18,hist_mean|hist_std|hist_n|hist_shrunk_k7|rec_mean_5|rec_mean_3|rec_std_5|momentum|basic_mean|basic_rec_5|entrou_rate|is_cold_start|posicao_1|posicao_2|posicao_3|posicao_4|posicao_5|posicao_6,1000.0,1000.0,1000.0,1
+FULL_MINUS_OPP,19,hist_mean|hist_std|hist_n|hist_shrunk_k7|rec_mean_5|rec_mean_3|rec_std_5|momentum|basic_mean|basic_rec_5|ga_per_game|ga_rec_5|ga_shrunk_k7|posicao_1|posicao_2|posicao_3|posicao_4|posicao_5|posicao_6,1000.0,0.1,1000.0,2
+FULL_MINUS_POS,15,hist_mean|hist_std|hist_n|hist_shrunk_k7|rec_mean_5|rec_mean_3|rec_std_5|momentum|basic_mean|basic_rec_5|ga_per_game|ga_rec_5|ga_shrunk_k7|entrou_rate|is_cold_start,1000.0,0.1,1000.0,2
+FULL,21,hist_mean|hist_std|hist_n|hist_shrunk_k7|rec_mean_5|rec_mean_3|rec_std_5|momentum|basic_mean|basic_rec_5|ga_per_game|ga_rec_5|ga_shrunk_k7|entrou_rate|is_cold_start|posicao_1|posicao_2|posicao_3|posicao_4|posicao_5|posicao_6,1000.0,0.1,1000.0,2

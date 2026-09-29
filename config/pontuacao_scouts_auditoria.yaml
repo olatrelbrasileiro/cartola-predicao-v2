@@ -1,0 +1,96 @@
+metadata:
+  etapa: "3.b"
+  status: "AUDITORIA_FECHADA"
+  data_auditoria: "2026-09-20"
+  dataset_periodo: "2024-2026"
+  descricao: >
+    Registro auditavel da tabela de pontuacao dos scouts Cartola FC,
+    com pesos por temporada, para uso no baseline B3 (componente basico).
+
+  fontes:
+    - url: "https://ge.globo.com/cartola/noticia/2025/03/17/quanto-vale-a-pontuacao-de-cada-scout-no-cartola.ghtml"
+      tipo: "OFICIAL"
+      data: "2025-03-17"
+      entidade: "GE/Globo"
+      titulo: "Quanto vale a pontuacao de cada scout no Cartola?"
+    - url: "https://ge.globo.com/cartola/noticia/2025/03/12/cartola-2025-defesa-e-desarme-tem-acrescimo-de-pontuacao-para-a-temporada-confira.ghtml"
+      tipo: "OFICIAL"
+      data: "2025-03-12"
+      entidade: "GE/Globo"
+      titulo: "Cartola 2025: defesa e desarme tem acrescimo de pontuacao"
+    - url: "https://ge.globo.com/gato-mestre/analises/noticia/2026/04/29/top-10-do-gato-mestre-revela-os-melhores-jogadores-em-media-basica-no-cartola-confira.ghtml"
+      tipo: "OFICIAL"
+      data: "2026-04-29"
+      entidade: "GE/Globo"
+      titulo: "Top 10 do Gato Mestre revela os melhores em media basica"
+
+pesos_por_temporada:
+  2024:
+    DS: 1.2
+    FT: 3.0
+    FF: 0.8
+    FD: 1.2
+    DE: 1.0
+    FC: -0.3
+    FS: 0.5
+    I: -0.1
+    CV: -3.0
+    CA: -1.0
+  2025:
+    DS: 1.5
+    FT: 3.0
+    FF: 0.8
+    FD: 1.2
+    DE: 1.3
+    FC: -0.3
+    FS: 0.5
+    I: -0.1
+    CV: -3.0
+    CA: -1.0
+  2026:
+    DS: 1.5
+    FT: 3.0
+    FF: 0.8
+    FD: 1.2
+    DE: 1.3
+    FC: -0.3
+    FS: 0.5
+    I: -0.1
+    CV: -3.0
+    CA: -1.0
+
+scouts_basicos: [DS, FT, FF, FD, DE, FC, FS, I, CV, CA]
+
+scouts_fora_b3:
+  G:  "gol (excluido por definicao do B3)"
+  A:  "assistencia (excluido por definicao do B3)"
+  SG: "saldo/jogo sem sofrer gols (excluido por definicao do B3)"
+  PS: "penalti sofrido (nao listado como basico)"
+  PP: "penalti perdido (nao listado como basico)"
+  DP: "defesa de penalti (nao listado como basico)"
+  GC: "gol contra (nao listado como basico)"
+  GS: "gol sofrido (nao listado como basico)"
+  PC: "penalti cometido (nao listado como basico)"
+  V:  "scout ambiguo, sem significado confirmado"
+
+notas:
+  - "NaN em scout tratado como 0 na soma (auditoria: n_zero=0 em todos; NaN = sem ocorrencia)."
+  - "Pesos temporais: 2024 usa DE=1.0, DS=1.2; 2025-2026 usam DE=1.3, DS=1.5."
+  - "Nenhum peso foi ajustado, aprendido ou otimizado."
+
+# -----------------------------------------------------------------------------
+# Auditoria 3.c — representacao temporal dos scouts
+# -----------------------------------------------------------------------------
+# Todos os scouts do dataset canonico sao CUMULATIVOS: o valor da linha
+# da rodada R e o total acumulado desde o inicio da temporada ate R.
+# Evidencia: 100% de nao-decrescimento em 328.516 pares consecutivos
+# (ver reports/auditoria_representacao_scouts_3c.md).
+#
+# Consequencia: qualquer uso do scout como observacao por rodada precisa
+# aplicar diff contra a observacao anterior do mesmo jogador/temporada.
+#
+# Coluna ausente: scout_GS existe no RAW mas nao foi incluido no canonico.
+semantica_temporal:
+  tipo: "CUMULATIVO"
+  fonte: "auditoria_3c"
+  scout_ausente_no_canonico: "GS"

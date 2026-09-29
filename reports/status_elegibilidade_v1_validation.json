@@ -1,0 +1,79 @@
+{
+  "gerado_em": "2026-09-21T21:13:58",
+  "parquet_sha256": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "parquet_sha_esperado": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "integridade_ok": true,
+  "regra": {
+    "elegiveis": [
+      2,
+      7
+    ],
+    "nao_elegiveis": [
+      3,
+      5,
+      6
+    ],
+    "mapa": {
+      "7": {
+        "nome": "Provavel",
+        "elegivel": true
+      },
+      "2": {
+        "nome": "Duvida",
+        "elegivel": true
+      },
+      "5": {
+        "nome": "Contundido",
+        "elegivel": false
+      },
+      "3": {
+        "nome": "Suspenso",
+        "elegivel": false
+      },
+      "6": {
+        "nome": "Nulo",
+        "elegivel": false
+      }
+    }
+  },
+  "integridade": {
+    "n_linhas": 77253,
+    "n_nulos_reais": 0,
+    "status_presentes": [
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "status_desconhecidos": [],
+    "duplicatas_T_R_A": 0,
+    "multi_status_celulas": 0,
+    "problemas": []
+  },
+  "criterios": {
+    "parquet_sha_ok": true,
+    "sem_nulos_reais": true,
+    "sem_desconhecidos": true,
+    "sem_duplicatas": true,
+    "sem_multi_status": true,
+    "folds_76": true,
+    "nenhum_fold_sem_elegiveis": true,
+    "todos_folds_invariantes": true,
+    "elegiveis_apenas_7_2": true,
+    "nao_elegiveis_3_5_6": true
+  },
+  "resultado": "PASS",
+  "n_folds_avaliados": 76,
+  "folds_por_temporada_observado": {
+    "2024": 29,
+    "2025": 29,
+    "2026": 18
+  },
+  "folds_por_temporada_esperado": {
+    "2024": 29,
+    "2025": 29,
+    "2026": 18
+  },
+  "invariância_resultados_falhas": 0
+}

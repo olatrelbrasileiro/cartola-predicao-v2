@@ -1,0 +1,4 @@
+caso,rec_p_5_esperado,rec_p_5_obtido,rec_p_5_ok,rec_p_3_esperado,rec_p_3_obtido,rec_p_3_ok,hist_n_p_esperado,hist_n_p_obtido,hist_n_p_ok
+padrao_misto_R8,4.25,4.25,True,4.666666666666667,4.666666666666667,True,4,4,True
+todas_jogadas_R8,5.0,5.0,True,6.0,6.0,True,7,7,True
+poucos_participantes_R8,6.0,6.0,True,6.0,6.0,True,2,2,True

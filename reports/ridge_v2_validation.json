@@ -1,0 +1,25 @@
+{
+  "gerado_em": "2026-09-21T13:45:00",
+  "n_folds": 76,
+  "n_test_total": 23691,
+  "n_ridge_fits": 12052,
+  "hashes_antes": {
+    "canonical": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+    "b2s_folds": "b56c6db440d7628acbbc52bb477e1b4fe81ce3fc87610e5aa0452e2110e6a142",
+    "harness": "236b7421ed83860d6921131d708b0508601a8be495ac35f175f91eaefca803a5",
+    "p0_folds": "8b4f61851c227d8ee8c2c76aa38f8c6389656bbb8d1109ee909ccce2d77bb689"
+  },
+  "hashes_depois": {
+    "canonical": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+    "b2s_folds": "b56c6db440d7628acbbc52bb477e1b4fe81ce3fc87610e5aa0452e2110e6a142",
+    "harness": "236b7421ed83860d6921131d708b0508601a8be495ac35f175f91eaefca803a5",
+    "p0_folds": "8b4f61851c227d8ee8c2c76aa38f8c6389656bbb8d1109ee909ccce2d77bb689"
+  },
+  "hashes_esperados": {
+    "canonical": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+    "b2s_folds": "b56c6db440d7628acbbc52bb477e1b4fe81ce3fc87610e5aa0452e2110e6a142",
+    "harness": "236b7421ed83860d6921131d708b0508601a8be495ac35f175f91eaefca803a5",
+    "p0_folds": "8b4f61851c227d8ee8c2c76aa38f8c6389656bbb8d1109ee909ccce2d77bb689"
+  },
+  "integridade_ok": true
+}

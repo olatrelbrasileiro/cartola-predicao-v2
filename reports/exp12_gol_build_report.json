@@ -1,0 +1,166 @@
+{
+  "jogador_sha256": "06928420c5e98ad99edb78d4fc5779047a35a74bb84034c57f3a7a83d6a94cd7",
+  "master_2425_sha256": "540c4545f7dcf4421cdb233d95835f7a823e9f14184fd90aa5479a278581b910",
+  "master_26_sha256": "9ea6027ae268f1d40ad2260cf4dddc79926bbc0d0058ed0d1e8f553f0873af0b",
+  "shape_total": [
+    7865,
+    94
+  ],
+  "por_temporada": {
+    "2024": 2882,
+    "2025": 2976,
+    "2026": 2007
+  },
+  "elegiveis_por_temporada": {
+    "2024": 714,
+    "2025": 694,
+    "2026": 497
+  },
+  "scout_heuristica": [
+    {
+      "scout": "scout_A",
+      "n_pairs": 136,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_CA",
+      "n_pairs": 1981,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_CV",
+      "n_pairs": 254,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_DE",
+      "n_pairs": 3246,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_DS",
+      "n_pairs": 325,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_FC",
+      "n_pairs": 227,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_FD",
+      "n_pairs": 28,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "fraca"
+    },
+    {
+      "scout": "scout_FF",
+      "n_pairs": 0,
+      "pct_decreasing": NaN,
+      "heuristica": "sem_dados",
+      "forca": "n/a"
+    },
+    {
+      "scout": "scout_FS",
+      "n_pairs": 2073,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_FT",
+      "n_pairs": 0,
+      "pct_decreasing": NaN,
+      "heuristica": "sem_dados",
+      "forca": "n/a"
+    },
+    {
+      "scout": "scout_G",
+      "n_pairs": 27,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "fraca"
+    },
+    {
+      "scout": "scout_I",
+      "n_pairs": 0,
+      "pct_decreasing": NaN,
+      "heuristica": "sem_dados",
+      "forca": "n/a"
+    },
+    {
+      "scout": "scout_PC",
+      "n_pairs": 285,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_PS",
+      "n_pairs": 0,
+      "pct_decreasing": NaN,
+      "heuristica": "sem_dados",
+      "forca": "n/a"
+    },
+    {
+      "scout": "scout_PP",
+      "n_pairs": 0,
+      "pct_decreasing": NaN,
+      "heuristica": "sem_dados",
+      "forca": "n/a"
+    },
+    {
+      "scout": "scout_SG",
+      "n_pairs": 2357,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_V",
+      "n_pairs": 0,
+      "pct_decreasing": NaN,
+      "heuristica": "sem_dados",
+      "forca": "n/a"
+    },
+    {
+      "scout": "scout_DP",
+      "n_pairs": 493,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "forte"
+    },
+    {
+      "scout": "scout_GC",
+      "n_pairs": 26,
+      "pct_decreasing": 0.0,
+      "heuristica": "provavelmente_acumulado",
+      "forca": "fraca"
+    }
+  ],
+  "detection_scout_type": {
+    "scout_DE": {
+      "2024": "accumulated",
+      "2025": "accumulated",
+      "2026": "accumulated"
+    }
+  },
+  "accumulated_temporadas": [
+    2024,
+    2025
+  ],
+  "master_coverage_missing": 26
+}

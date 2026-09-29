@@ -1,0 +1,31 @@
+rodada,partida_id,clube,clube_id,adversario,placar,GS_agregado,gols_sofridos,dif,n_atletas_no_payload,n_participantes,n_goleiros,n_goleiros_com_GS,n_goleiros_com_SG,goleiros_no_payload,classe
+1,346238,BAH,265,COR (264),1x2,3,1,2,19,19,2,2,0,"71043/Léo Vieira entrou=True GS=2 SG=0 DE=4 DP=0 scout={'CA': 1, 'DE': 4, 'GS': 2}; 91101/Ronaldo entrou=True GS=1 SG=0 DE=4 DP=0 scout={'DE': 4, 'GS': 1}",C: mais de um goleiro com GS (dupla contagem)
+1,346244,CHA,315,SAN (277),4x2,0,2,-2,16,16,0,0,0,(nenhum goleiro posicao_id=1 no payload),"B: elenco presente, goleiro ausente do payload"
+2,346256,CHA,315,VAS (267),1x1,0,1,-1,16,16,0,0,0,(nenhum goleiro posicao_id=1 no payload),"B: elenco presente, goleiro ausente do payload"
+2,346262,CAP,293,COR (264),0x1,0,1,-1,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+2,346263,BAH,265,FLU (266),1x1,2,1,1,18,18,2,2,0,"71043/Léo Vieira entrou=True GS=1 SG=0 DE=10 DP=0 scout={'DE': 10, 'FS': 2, 'GS': 1}; 91101/Ronaldo entrou=True GS=1 SG=0 DE=3 DP=0 scout={'DE': 3, 'GS': 1}",C: mais de um goleiro com GS (dupla contagem)
+3,346292,BAH,265,VAS (267),0x1,3,0,3,18,18,2,1,1,"71043/Léo Vieira entrou=True GS=3 SG=0 DE=2 DP=0 scout={'DE': 2, 'GS': 3}; 91101/Ronaldo entrou=True GS=0 SG=1 DE=4 DP=0 scout={'CA': 1, 'DE': 4, 'SG': 1}",D: GS e SG simultaneos no mesmo time (contradicao interna)
+3,346299,FLA,262,VIT (287),1x2,0,1,-1,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+3,346299,VIT,287,FLA (262),1x2,0,2,-2,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+3,346300,CHA,315,CFC (294),3x3,0,3,-3,16,16,0,0,0,(nenhum goleiro posicao_id=1 no payload),"B: elenco presente, goleiro ausente do payload"
+4,346335,MIR,2305,FLA (262),2x0,0,2,-2,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+4,346349,CHA,315,BAH (265),2x0,0,2,-2,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+5,346403,CHA,315,SAO (276),2x0,0,2,-2,16,16,0,0,0,(nenhum goleiro posicao_id=1 no payload),"B: elenco presente, goleiro ausente do payload"
+5,346405,SAN,277,MIR (2305),2x2,0,2,-2,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+5,346405,MIR,2305,SAN (277),2x2,0,2,-2,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+5,346408,BOT,263,CAP (293),4x1,0,4,-4,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+5,346408,CAP,293,BOT (263),4x1,0,1,-1,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+5,346409,BAH,265,VIT (287),1x1,3,1,2,18,18,2,2,0,"71043/Léo Vieira entrou=True GS=2 SG=0 DE=5 DP=0 scout={'DE': 5, 'GS': 2}; 91101/Ronaldo entrou=True GS=1 SG=0 DE=1 DP=0 scout={'DE': 1, 'GS': 1}",C: mais de um goleiro com GS (dupla contagem)
+6,346481,BAH,265,INT (285),0x1,1,0,1,18,18,2,1,1,"71043/Léo Vieira entrou=True GS=1 SG=0 DE=3 DP=0 scout={'DE': 3, 'FS': 1, 'GS': 1}; 91101/Ronaldo entrou=True GS=0 SG=1 DE=2 DP=0 scout={'CA': 1, 'DE': 2, 'FS': 1, 'SG': 1}",D: GS e SG simultaneos no mesmo time (contradicao interna)
+6,346484,CHA,315,GRE (284),1x1,0,1,-1,15,15,0,0,0,(nenhum goleiro posicao_id=1 no payload),"B: elenco presente, goleiro ausente do payload"
+8,346591,CHA,315,INT (285),2x0,0,2,-2,16,16,0,0,0,(nenhum goleiro posicao_id=1 no payload),"B: elenco presente, goleiro ausente do payload"
+8,346594,BAH,265,REM (364),4x1,6,4,2,18,18,3,2,0,"71043/Léo Vieira entrou=True GS=2 SG=0 DE=5 DP=0 scout={'DE': 5, 'GS': 2}; 85425/João Paulo entrou=True GS=4 SG=0 DE=4 DP=0 scout={'DE': 4, 'FS': 1, 'GS': 4}; 91101/Ronaldo entrou=True GS=0 SG=0 DE=2 DP=0 scout={'DE': 2}",C: mais de um goleiro com GS (dupla contagem)
+19,346535,FLU,266,RBB (280),1x1,0,1,-1,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+19,346535,RBB,280,FLU (266),1x1,0,1,-1,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+19,346536,BOT,263,SAN (277),2x1,0,1,-1,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+19,346536,SAN,277,BOT (263),2x1,0,2,-2,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+19,346539,GRE,284,MIR (2305),2x1,0,2,-2,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+19,346539,MIR,2305,GRE (284),2x1,0,1,-1,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+19,346543,VAS,267,VIT (287),1x0,0,1,-1,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+21,346282,BOT,263,GRE (284),3x2,0,2,-2,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload
+21,346282,GRE,284,BOT (263),3x2,0,3,-3,1,0,0,0,0,(nenhum goleiro posicao_id=1 no payload),A: elenco ausente do payload

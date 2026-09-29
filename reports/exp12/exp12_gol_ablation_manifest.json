@@ -1,0 +1,219 @@
+{
+  "timestamp": "2026-09-26T20:59:26",
+  "input_dataset": "/data/data/com.termux/files/home/cartola-predicao-v2/data/interim/exp12/gol_pooling_2024_2026.parquet",
+  "input_dataset_sha256": "a47d621ded6cf36f1fbf21fe9a6a560b130e1a5b628f6b8405b84b840816c0bf",
+  "input_dataset_shape": [
+    7865,
+    97
+  ],
+  "target": "pontos_num",
+  "eligibility_col": "elegivel_modelo",
+  "catboost_params": {
+    "iterations": 500,
+    "learning_rate": 0.05,
+    "depth": 4,
+    "l2_leaf_reg": 3.0,
+    "random_seed": 42,
+    "verbose": false,
+    "allow_writing_files": false,
+    "loss_function": "RMSE"
+  },
+  "min_train_rows": 50,
+  "min_test_rows": 3,
+  "n_folds": 98,
+  "n_predictions_pooled": 1850,
+  "features_A": [
+    "gk_pontos_last1",
+    "gk_pontos_mean_3",
+    "gk_pontos_mean_3_n_obs",
+    "gk_pontos_mean_5",
+    "gk_pontos_mean_5_n_obs",
+    "gk_pontos_mean_hist",
+    "gk_DE_mean_3",
+    "gk_DE_mean_3_n_obs",
+    "gk_DE_mean_5",
+    "gk_DE_mean_5_n_obs",
+    "mando_C"
+  ],
+  "features_B": [
+    "gk_pontos_last1",
+    "gk_pontos_mean_3",
+    "gk_pontos_mean_3_n_obs",
+    "gk_pontos_mean_5",
+    "gk_pontos_mean_5_n_obs",
+    "gk_pontos_mean_hist",
+    "gk_DE_mean_3",
+    "gk_DE_mean_3_n_obs",
+    "gk_DE_mean_5",
+    "gk_DE_mean_5_n_obs",
+    "mando_C",
+    "team_gols_sofridos_mean_3",
+    "team_gols_sofridos_mean_3_n_obs",
+    "team_gols_sofridos_mean_5",
+    "team_gols_sofridos_mean_5_n_obs",
+    "team_clean_sheet_rate_mean_3",
+    "team_clean_sheet_rate_mean_3_n_obs",
+    "team_clean_sheet_rate_mean_5",
+    "team_clean_sheet_rate_mean_5_n_obs"
+  ],
+  "features_C": [
+    "gk_pontos_last1",
+    "gk_pontos_mean_3",
+    "gk_pontos_mean_3_n_obs",
+    "gk_pontos_mean_5",
+    "gk_pontos_mean_5_n_obs",
+    "gk_pontos_mean_hist",
+    "gk_DE_mean_3",
+    "gk_DE_mean_3_n_obs",
+    "gk_DE_mean_5",
+    "gk_DE_mean_5_n_obs",
+    "mando_C",
+    "team_gols_sofridos_mean_3",
+    "team_gols_sofridos_mean_3_n_obs",
+    "team_gols_sofridos_mean_5",
+    "team_gols_sofridos_mean_5_n_obs",
+    "team_clean_sheet_rate_mean_3",
+    "team_clean_sheet_rate_mean_3_n_obs",
+    "team_clean_sheet_rate_mean_5",
+    "team_clean_sheet_rate_mean_5_n_obs",
+    "opp_gols_marcados_mean_3",
+    "opp_gols_marcados_mean_3_n_obs",
+    "opp_FTT_mean_3",
+    "opp_FTT_mean_3_n_obs",
+    "opp_FTT_mean_5",
+    "opp_FTT_mean_5_n_obs"
+  ],
+  "features_D": [
+    "gk_pontos_last1",
+    "gk_pontos_mean_3",
+    "gk_pontos_mean_3_n_obs",
+    "gk_pontos_mean_5",
+    "gk_pontos_mean_5_n_obs",
+    "gk_pontos_mean_hist",
+    "gk_DE_mean_3",
+    "gk_DE_mean_3_n_obs",
+    "gk_DE_mean_5",
+    "gk_DE_mean_5_n_obs",
+    "mando_C",
+    "team_gols_sofridos_mean_3",
+    "team_gols_sofridos_mean_3_n_obs",
+    "team_gols_sofridos_mean_5",
+    "team_gols_sofridos_mean_5_n_obs",
+    "team_clean_sheet_rate_mean_3",
+    "team_clean_sheet_rate_mean_3_n_obs",
+    "team_clean_sheet_rate_mean_5",
+    "team_clean_sheet_rate_mean_5_n_obs",
+    "opp_gols_marcados_mean_3",
+    "opp_gols_marcados_mean_3_n_obs",
+    "opp_FTT_mean_3",
+    "opp_FTT_mean_3_n_obs",
+    "opp_FTT_mean_5",
+    "opp_FTT_mean_5_n_obs",
+    "canon_odd_home",
+    "canon_odd_draw",
+    "canon_odd_away"
+  ],
+  "features_missing": {
+    "A": [],
+    "B": [],
+    "C": [],
+    "D": []
+  },
+  "old_f2_features_present": [
+    "opp_clean_sheet_rate_last3",
+    "opp_clean_sheet_rate_last5",
+    "opp_goals_conceded_last3",
+    "opp_goals_conceded_last5",
+    "opp_goals_scored_last3",
+    "opp_goals_scored_last5",
+    "opp_shots_last3",
+    "opp_shots_last5",
+    "opp_shots_on_target_last3",
+    "opp_shots_on_target_last5",
+    "team_clean_sheet_rate_last3",
+    "team_clean_sheet_rate_last5",
+    "team_goals_conceded_last3",
+    "team_goals_conceded_last5",
+    "team_goals_scored_last3",
+    "team_goals_scored_last5",
+    "team_shots_last3",
+    "team_shots_last5",
+    "team_shots_on_target_last3",
+    "team_shots_on_target_last5"
+  ],
+  "seasons": [
+    2024,
+    2025,
+    2026
+  ],
+  "rounds_per_season": {
+    "2024": 38,
+    "2025": 38,
+    "2026": 26
+  },
+  "pooled_summary": [
+    {
+      "arm": "A",
+      "n": 1850,
+      "MAE": 3.4195372613576005,
+      "RMSE": 4.1889030116891135,
+      "Spearman_pooled": 0.0028907631947036314
+    },
+    {
+      "arm": "B",
+      "n": 1850,
+      "MAE": 3.3905825482171688,
+      "RMSE": 4.169596930119711,
+      "Spearman_pooled": 0.01035560614363867
+    },
+    {
+      "arm": "C",
+      "n": 1850,
+      "MAE": 3.3692581136740007,
+      "RMSE": 4.150585512601628,
+      "Spearman_pooled": 0.013243497553867853
+    },
+    {
+      "arm": "D",
+      "n": 1850,
+      "MAE": 3.3378243078865353,
+      "RMSE": 4.127831281660196,
+      "Spearman_pooled": 0.02577682286344247
+    }
+  ],
+  "paired_win_rates": {
+    "B_vs_A": {
+      "n_obs": 1850,
+      "win_rate_obs": 0.5064864864864865,
+      "tie_rate_obs": 0.0,
+      "lose_rate_obs": 0.4935135135135135,
+      "mean_delta_MAE_obs": -0.028954713140431843,
+      "median_delta_MAE_obs": -0.008723753111369081,
+      "win_rate_fold": 0.5612244897959183
+    },
+    "C_vs_B": {
+      "n_obs": 1850,
+      "win_rate_obs": 0.5032432432432432,
+      "tie_rate_obs": 0.0,
+      "lose_rate_obs": 0.49675675675675673,
+      "mean_delta_MAE_obs": -0.02132443454316843,
+      "median_delta_MAE_obs": -0.011531576379173236,
+      "win_rate_fold": 0.5306122448979592
+    },
+    "D_vs_C": {
+      "n_obs": 1850,
+      "win_rate_obs": 0.5145945945945946,
+      "tie_rate_obs": 0.0,
+      "lose_rate_obs": 0.4854054054054054,
+      "mean_delta_MAE_obs": -0.03143380578746569,
+      "median_delta_MAE_obs": -0.02734894570037394,
+      "win_rate_fold": 0.6020408163265306
+    }
+  },
+  "spearman_mean_folds": {
+    "A": 0.006749851531068053,
+    "B": 0.020981035426658072,
+    "C": 0.015217767784069374,
+    "D": 0.014919334666801393
+  }
+}

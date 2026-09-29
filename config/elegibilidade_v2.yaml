@@ -1,0 +1,82 @@
+# Decisoes oficiais da ETAPA 3 (auditoria da base canonica).
+# Este arquivo NAO altera o config.yaml principal.
+# Ele sera consumido pelo harness walk-forward (ETAPA 4).
+
+versao: v2
+data_decisao: "2026-09-20"
+etapa: 3
+status: fechada
+
+base_canonica:
+  arquivo: data/interim/cartola_jogador_rodada_v2.parquet
+  linhas_totais: 77253
+
+decisao_A_elegibilidade:
+  descricao: >
+    Todas as observacoes pos-rodada validas entram no conjunto de
+    treino/avaliacao, incluindo entrou_em_campo=False. Nao-participacao
+    e tratada como observacao real (nao e zeramento artificial).
+  regra:
+    incluir:
+      - entrou_em_campo == True
+      - entrou_em_campo == False
+    excluir:
+      - "temporada == 2025 and rodada == 1"   # snapshot pre-rodada confirmado
+  justificativa: >
+    Auditoria 3.2 identificou 2025/R1 como unico caso com
+    prop_entrou=0 e prop_zeros=1 simultaneamente; media_num.std=0,
+    jogos_num=0 para todos. Snapshot pre-rodada, nao pos-rodada.
+  impacto_estimado:
+    linhas_excluidas: 619
+    linhas_elegiveis: 76634
+
+decisao_B_ambiguas:
+  descricao: >
+    Linhas com entrou_em_campo=False mas pontos_num!=0 sao ambiguas
+    (nao-participacao com pontuacao nao-zero). Ficam no canonico,
+    marcadas, e fora da avaliacao principal inicial.
+  regra:
+    definir_flag: "flag_ambigua_B"
+    condicao_flag: "entrou_em_campo == False and pontos_num != 0"
+    uso:
+      - manter_no_dataset: true
+      - excluir_da_avaliacao_principal: true
+      - elegivel_para_analise_secundaria: true
+  contagem_auditada: 108
+  justificativa: >
+    Investigacao descritiva (3.5/relatorio) mostrou que sao casos raros
+    onde o Cartola atribui pontuacao a jogador marcado como nao-entrou
+    (ex.: Battaglia 2024/R1: -3.9 pts com scout_FS, scout_FC, scout_CA).
+    Natureza ambigua. Nao descartar dados, mas nao contaminar a avaliacao
+    principal.
+
+politica_de_missingness:
+  # Registrado aqui apenas para referencia futura; o harness ainda nao
+  # implementa politica de imputacao.
+  scout_DP_e_GC_ausentes_em_rodadas_especificas:
+    "2024": [1, 2, 3]
+    "2025": [1]
+    "2026": [1, 2]   # apenas DP
+  acao: "NaN preservado; nenhuma imputacao nesta etapa"
+
+observacoes_para_etapa_4:
+  - "Todas as features do fold R dependem apenas de rodadas < R."
+  - "Nenhuma transformacao pode olhar para rodada >= R."
+  - "2025/R1 nunca deve aparecer como treino nem como teste."
+  - "As 108 linhas ambiguas ficam no dataset com flag_ambigua_B=True."
+  - "Walk-forward expansivo: treinar R1..R(k-1) -> prever Rk."
+  - "Metrica primaria: MAE. Secundaria: Spearman por rodada. Diagnostico: RMSE."
+
+# -----------------------------------------------------------------------------
+# REGRA DE APLICACAO (explicita)
+# -----------------------------------------------------------------------------
+# Este arquivo e politica declarativa. Nao e um script de transformacao.
+# - NAO alterar o Parquet canonico.
+# - NAO adicionar colunas ao Parquet.
+# - flag_ambigua_B e derivada em memoria pelo harness, com a regra:
+#     flag_ambigua_B = (entrou_em_campo == False) and (pontos_num != 0)
+# - A exclusao de 2025/R1 e aplicada em memoria pelo harness, com a regra:
+#     elegivel = not (temporada == 2025 and rodada == 1)
+# - O Parquet permanece imutavel em toda a pipeline.
+# - Qualquer mudanca de politica deve ser feita por versionamento deste arquivo
+#   (por exemplo, elegibilidade_v3.yaml), nunca por mutacao do canonico.

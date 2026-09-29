@@ -1,0 +1,37 @@
+versao: ridge_v1
+data: "2026-09-20"
+status: oficial
+
+features:
+  historico:   [hist_mean, hist_std, hist_n]
+  recente:     [rec_mean_5, rec_mean_3, rec_std_5, momentum]
+  basico:      [basic_mean, basic_rec_5]
+  gols_assist: [ga_per_game, ga_rec_5]
+  auxiliar:    [entrou_rate]
+  flag:        [is_cold_start]
+
+definicoes:
+  ga_rec_5: "soma de (diff_G + diff_A) nas ultimas min(5, n_obs) obs elegiveis / min(5, n_obs)"
+  ga_per_game: "(G_cum + A_cum) da ultima obs elegivel antes do alvo / jogos_num dessa obs"
+  demais: "conforme especificacao da Etapa 6"
+
+cold_start:
+  quando: "hist_n == 0"
+  imputacao: "media do treino do fold (calculada dentro do treino)"
+  flag: "is_cold_start = 1"
+  nota: "is_cold_start entra no Ridge como feature normal"
+
+ridge:
+  grade_alpha: [0.01, 0.1, 1, 10, 100]
+  selecao: "inner walk-forward dentro do treino do fold externo"
+  min_inner_rounds: 3
+  padronizacao: "StandardScaler fit no treino, aplicado em treino e teste"
+
+benchmark:
+  referencia: B2S
+  mae: 1.4016
+  spearman: 0.4617
+  criterio_sucesso:
+    - "MAE Ridge < 1.4016"
+    - "Ridge melhor em >= 39/76 folds"
+    - "Spearman Ridge >= 0.4617"

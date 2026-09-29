@@ -1,0 +1,339 @@
+{
+    "experimento": "EXP-12",
+    "modo": "cumulative",
+    "target_tier": 3,
+    "tiers_ativos": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "nome_modelo": "EXP12_M4_Cumulative_T0_to_T3",
+    "temporada": 2026,
+    "n_folds": 25,
+    "n_predictions": 7884,
+    "mae_global": 2.786375409858423,
+    "rmse_global": 3.8993834592294108,
+    "spearman_global": 0.26891210359640155,
+    "metricas_por_posicao": {
+        "1": {
+            "posicao_id": "1",
+            "n_predictions": 477,
+            "mae": 3.292224113741908,
+            "rmse": 4.082789527273022,
+            "spearman": 0.02366830345462087
+        },
+        "2": {
+            "posicao_id": "2",
+            "n_predictions": 1164,
+            "mae": 3.231581248414069,
+            "rmse": 4.10424857631709,
+            "spearman": 0.09766485603340591
+        },
+        "3": {
+            "posicao_id": "3",
+            "n_predictions": 1130,
+            "mae": 2.790012152213481,
+            "rmse": 3.5925667429065697,
+            "spearman": 0.06902684470942771
+        },
+        "4": {
+            "posicao_id": "4",
+            "n_predictions": 2578,
+            "mae": 2.5238929992831496,
+            "rmse": 3.663189787031415,
+            "spearman": 0.22828603697508779
+        },
+        "5": {
+            "posicao_id": "5",
+            "n_predictions": 2073,
+            "mae": 2.9378837334895436,
+            "rmse": 4.41467133846562,
+            "spearman": 0.29203333086229355
+        },
+        "6": {
+            "posicao_id": "6",
+            "n_predictions": 462,
+            "mae": 1.9183753078742898,
+            "rmse": 2.434995652174595,
+            "spearman": 0.1897851523285932
+        }
+    },
+    "features_total": 23,
+    "features_historico": [
+        "posicao_id",
+        "hist_mean",
+        "hist_std",
+        "hist_n",
+        "rec_mean_5",
+        "rec_mean_3",
+        "rec_std_5",
+        "basic_mean",
+        "basic_rec_5"
+    ],
+    "features_contexto": [
+        "mando",
+        "rodada",
+        "team_games_played_season",
+        "opp_games_played_season",
+        "team_FTT_last5_mean",
+        "team_FA_last5_mean",
+        "team_G_last5_mean",
+        "team_gols_sofridos_last5_mean",
+        "team_SG_last5_rate",
+        "opp_gols_sofridos_last5_mean",
+        "opp_SG_last5_rate",
+        "opp_FTT_last5_mean",
+        "opp_FA_last5_mean",
+        "opp_G_last5_mean"
+    ],
+    "importancia_features": {
+        "posicao_id": 18.643948937830174,
+        "hist_mean": 4.548930922210357,
+        "hist_std": 5.292037831318696,
+        "hist_n": 3.1339247082769557,
+        "rec_mean_5": 3.5752067994991985,
+        "rec_mean_3": 6.817136335821745,
+        "rec_std_5": 4.856159399698309,
+        "basic_mean": 4.308177066738267,
+        "basic_rec_5": 3.767699357455877,
+        "mando": 6.350780974804379,
+        "rodada": 1.6393407666365785,
+        "team_games_played_season": 1.6669815163810098,
+        "opp_games_played_season": 1.7849705009984784,
+        "team_FTT_last5_mean": 4.110050034214889,
+        "team_FA_last5_mean": 3.4220529998171214,
+        "team_G_last5_mean": 3.285748849614576,
+        "team_gols_sofridos_last5_mean": 2.7497592337638426,
+        "team_SG_last5_rate": 2.3155225110779076,
+        "opp_gols_sofridos_last5_mean": 3.9125538360765737,
+        "opp_SG_last5_rate": 1.8322025463672336,
+        "opp_FTT_last5_mean": 4.5155823064831315,
+        "opp_FA_last5_mean": 3.485056131688825,
+        "opp_G_last5_mean": 3.9861764332259066
+    },
+    "importancia_por_grupo": {
+        "historico": 54.94322135884958,
+        "tier_0": 11.442073758820444,
+        "tier_1": 10.817851883646586,
+        "tier_2": 10.810038127285557,
+        "tier_3": 11.986814871397863
+    },
+    "catboost_params": {
+        "loss_function": "MAE",
+        "iterations": 500,
+        "depth": 6,
+        "learning_rate": 0.05,
+        "l2_leaf_reg": 3,
+        "random_seed": 42,
+        "verbose": false
+    },
+    "hashes_insumos": {
+        "cartola_jogador_rodada_v2": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+        "team_context_features_v1": "794c5a2dff846fa82091fcdb1aa6b31dda7080b8aab36c22a71b2afcf83afdb7",
+        "team_scout_history": "9ea6027ae268f1d40ad2260cf4dddc79926bbc0d0058ed0d1e8f553f0873af0b"
+    },
+    "integridade": "APROVADA (10/10 verificações)",
+    "folds_detalhe": [
+        {
+            "rodada": 2,
+            "n_train": 335,
+            "n_test": 306,
+            "mae": 2.9470703219618746,
+            "rmse": 4.145419461204073,
+            "spearman": 0.05091541039306834
+        },
+        {
+            "rodada": 3,
+            "n_train": 641,
+            "n_test": 301,
+            "mae": 3.085026154617977,
+            "rmse": 4.291103331772046,
+            "spearman": 0.13600178429135934
+        },
+        {
+            "rodada": 4,
+            "n_train": 942,
+            "n_test": 235,
+            "mae": 2.7494023813532897,
+            "rmse": 3.894725971523217,
+            "spearman": 0.23942372744293353
+        },
+        {
+            "rodada": 5,
+            "n_train": 1177,
+            "n_test": 272,
+            "mae": 2.909046510425944,
+            "rmse": 4.013094796976224,
+            "spearman": 0.20689630767361625
+        },
+        {
+            "rodada": 6,
+            "n_train": 1449,
+            "n_test": 336,
+            "mae": 2.6243246551089268,
+            "rmse": 3.4995759613878126,
+            "spearman": 0.19593329531673462
+        },
+        {
+            "rodada": 7,
+            "n_train": 1785,
+            "n_test": 334,
+            "mae": 2.7075656145027454,
+            "rmse": 3.610453631115811,
+            "spearman": 0.2713703995050071
+        },
+        {
+            "rodada": 8,
+            "n_train": 2119,
+            "n_test": 333,
+            "mae": 2.5531174968567334,
+            "rmse": 3.609325949527234,
+            "spearman": 0.30425353644378594
+        },
+        {
+            "rodada": 9,
+            "n_train": 2452,
+            "n_test": 342,
+            "mae": 2.937438491062501,
+            "rmse": 4.144455320155714,
+            "spearman": 0.2829790403925796
+        },
+        {
+            "rodada": 10,
+            "n_train": 2794,
+            "n_test": 334,
+            "mae": 2.562115096586265,
+            "rmse": 3.5488289025509934,
+            "spearman": 0.2632818564678955
+        },
+        {
+            "rodada": 11,
+            "n_train": 3128,
+            "n_test": 332,
+            "mae": 2.609711018817028,
+            "rmse": 3.4492636164902617,
+            "spearman": 0.3132572204333808
+        },
+        {
+            "rodada": 12,
+            "n_train": 3460,
+            "n_test": 339,
+            "mae": 2.7566176997185283,
+            "rmse": 3.943551664281828,
+            "spearman": 0.32869030671611543
+        },
+        {
+            "rodada": 13,
+            "n_train": 3799,
+            "n_test": 333,
+            "mae": 2.775629881661401,
+            "rmse": 3.846682929020357,
+            "spearman": 0.2853721455572184
+        },
+        {
+            "rodada": 14,
+            "n_train": 4132,
+            "n_test": 335,
+            "mae": 2.898766705312313,
+            "rmse": 3.93788663175241,
+            "spearman": 0.21194226774239577
+        },
+        {
+            "rodada": 15,
+            "n_train": 4467,
+            "n_test": 333,
+            "mae": 2.636211469891406,
+            "rmse": 3.632123502708152,
+            "spearman": 0.2570044052595144
+        },
+        {
+            "rodada": 16,
+            "n_train": 4800,
+            "n_test": 333,
+            "mae": 2.7351360598625396,
+            "rmse": 4.091419371890935,
+            "spearman": 0.2544287652887033
+        },
+        {
+            "rodada": 17,
+            "n_train": 5133,
+            "n_test": 333,
+            "mae": 2.975264750633309,
+            "rmse": 4.040678719377348,
+            "spearman": 0.25981798240617
+        },
+        {
+            "rodada": 18,
+            "n_train": 5466,
+            "n_test": 338,
+            "mae": 2.8288342927139194,
+            "rmse": 4.125879208789063,
+            "spearman": 0.396576969824111
+        },
+        {
+            "rodada": 19,
+            "n_train": 5804,
+            "n_test": 201,
+            "mae": 2.941795893313554,
+            "rmse": 4.561109684950067,
+            "spearman": 0.29300191802547143
+        },
+        {
+            "rodada": 20,
+            "n_train": 6005,
+            "n_test": 336,
+            "mae": 2.6199078617524183,
+            "rmse": 3.579794745176413,
+            "spearman": 0.2714857879990345
+        },
+        {
+            "rodada": 21,
+            "n_train": 6341,
+            "n_test": 204,
+            "mae": 2.7465151426585934,
+            "rmse": 3.844923211603621,
+            "spearman": 0.35174365775979455
+        },
+        {
+            "rodada": 22,
+            "n_train": 6545,
+            "n_test": 333,
+            "mae": 2.5536713565580356,
+            "rmse": 3.5005521799890893,
+            "spearman": 0.3062457356038726
+        },
+        {
+            "rodada": 23,
+            "n_train": 6878,
+            "n_test": 336,
+            "mae": 2.8700241026429696,
+            "rmse": 4.125651574251869,
+            "spearman": 0.23212523223319007
+        },
+        {
+            "rodada": 24,
+            "n_train": 7214,
+            "n_test": 337,
+            "mae": 2.9342928432746187,
+            "rmse": 4.026472474985416,
+            "spearman": 0.329314683491287
+        },
+        {
+            "rodada": 25,
+            "n_train": 7551,
+            "n_test": 329,
+            "mae": 3.004422083407983,
+            "rmse": 4.228816604595561,
+            "spearman": 0.20940300015520288
+        },
+        {
+            "rodada": 26,
+            "n_train": 7880,
+            "n_test": 339,
+            "mae": 2.7953697436807974,
+            "rmse": 3.875577807807647,
+            "spearman": 0.3914335202554796
+        }
+    ]
+}

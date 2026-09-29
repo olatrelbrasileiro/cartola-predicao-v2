@@ -1,0 +1,20 @@
+{
+  "catboost_v2_path": "/workspaces/cartola-predicao-v2/scripts/catboost_v2.py",
+  "hashes": {
+    "CATBOOST_PARAMS": "1a7724611c3c661f",
+    "FEATURES_COM": "5ba67bd22ec3a2a7",
+    "FEATURES_SEM": "06c275622df8a245",
+    "CAT_FEATURES": "364206a213f28019",
+    "TARGET": "pontos_num",
+    "HASH_CANON": "15be1a317afb940c...",
+    "HASH_HARNESS": "236b7421ed83860d...",
+    "HASH_P0": "8b4f61851c227d8e..."
+  },
+  "features_com_len": 21,
+  "features_sem_len": 16,
+  "cat_features": [
+    "posicao_id"
+  ],
+  "target": "pontos_num",
+  "main_nao_executado": true
+}

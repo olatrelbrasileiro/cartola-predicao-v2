@@ -1,0 +1,36 @@
+# Ordem obrigatória de implementação
+
+Status: marcar [x] apenas quando a etapa estiver VALIDADA (com verificação
+executada e resultado conferido).
+
+- [x] ETAPA 1 — Estrutura do projeto
+- [x] ETAPA 2 — Pipeline de dados jogador × rodada
+- [x] ETAPA 3 — Auditoria dos dados
+- [ ] ETAPA 4 — Harness walk-forward
+- [ ] ETAPA 5 — Baselines B0-B5
+- [ ] ETAPA 6 — Ridge (M1)
+- [ ] ETAPA 7 — CatBoost (M2)
+- [ ] ETAPA 8 — Experimentos adicionais (somente se justificado)
+
+## Regras de progressão
+- Não pular etapas.
+- Não avançar enquanto a etapa atual não estiver validada.
+- Não adicionar features fora do feature set inicial sem justificativa
+  metodológica e sem passar pelo harness.
+- Não substituir a metodologia oficial por outra abordagem.
+
+
+## Estado da Etapa 5 (baselines)
+- [x] B0  — global, MAE 2.0748
+- [x] B1  — histórico expansivo, MAE 1.6012
+- [x] B2  — últimas 5 observações, MAE 1.5778
+- [x] B3  — basic_score, MAE 1.5339 (rebaixado a diagnóstico)
+- [x] H1  — compressão identificada
+- [x] H2A — α estável walk-forward
+- [x] H2B — sinal ortogonal detectado, explorabilidade não demonstrada
+- [x] B2S — B2 + shrinkage walk-forward, MAE 1.4016 (oficial)
+
+## Pendências
+- [ ] Explorar H2B (sinal residual do B3) — precisa de hipótese pré-registrada
+- [ ] Definir próximo baseline ou componente
+- [ ] Etapa 6 (Ridge) só depois de fechar a Etapa 5

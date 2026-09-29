@@ -1,0 +1,58 @@
+{
+  "gerado_em": "2026-09-21T22:50:41",
+  "parquet_sha256": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "parquet_sha_esperado": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "n_observacoes": 23691,
+  "n_folds": 76,
+  "folds_por_temporada": {
+    "2024": 29,
+    "2025": 29,
+    "2026": 18
+  },
+  "criterios": {
+    "parquet_sha_ok": true,
+    "predicoes_presentes": true,
+    "n_observacoes_ok": true,
+    "folds_76_ok": true,
+    "folds_temporadas_ok": true,
+    "sem_duplicatas": true,
+    "participantes_only": true,
+    "predicoes_validas": true,
+    "posicoes_validas": true,
+    "tres_temporadas": true,
+    "metricas_temporais_ok": true,
+    "metricas_temporada_posicao_ok": true,
+    "metricas_fold_ok": true,
+    "resumo_fold_ok": true,
+    "ndcg_temporal_ok": true,
+    "comparacao_mesmo_conjunto_ok": true,
+    "relatorio_gerado": true,
+    "validation_json_gerado": true
+  },
+  "resultado_metricas": "PASS",
+  "resultado_ndcg": "PASS",
+  "heterogeneidade": {
+    "temporadas_melhor_mae": [
+      2024,
+      2025,
+      2026
+    ],
+    "temporadas_pior_mae": [],
+    "sinal_mae_misto": false,
+    "temporadas_melhor_spearman": [
+      2024,
+      2025,
+      2026
+    ],
+    "temporadas_pior_spearman": [],
+    "sinal_spearman_misto": false
+  },
+  "ndcg_alertas": {
+    "n_alertas_total": 0,
+    "n_lt_2": 0,
+    "n_idcg_zero": 0,
+    "n_idcg_negativo": 0,
+    "n_ndcg_negativo": 0,
+    "decisao_transformacao_relevancia": "NAO_NECESSARIA_NESTE_DIAGNOSTICO"
+  }
+}

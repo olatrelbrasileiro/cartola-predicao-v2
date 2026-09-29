@@ -1,0 +1,68 @@
+versao: temporalidade_confronto_v1
+data: "2026-09-20"
+status: congelado
+decisao: "Caminho 1 — aceitar COMPATIVEL_JANELA_FD sob assuncao operacional"
+
+fontes:
+  odds: "football-data.co.uk BRA.csv (AvgCH/AvgCD/AvgCA = closing average)"
+  cutoff: "pesquisa manual em GE/Cartola (reports/auditoria_cutoff_confronto_v1.csv)"
+  cutoff_cobertura: "103/103 rodadas (2024: 38, 2025: 38, 2026: 27)"
+
+regra_coleta_fd:
+  descricao: >
+    Football-Data coleta odds em janelas fixas (documentacao oficial):
+    - jogos de fim de semana (sab/dom): sexta ate ~17:00 BST
+    - jogos de meio de semana (ter/qua/qui): terca ate ~13:00 BST
+  fonte: "football-data.co.uk, secao Notes"
+
+conversao_tz:
+  cartola_cutoff: "BRT (UTC-3) -> UTC (somar 3h)"
+  fd_ceiling_bst: "BST (UTC+1) -> UTC (subtrair 1h)"
+
+assuncao_closing_average:
+  status: "assumcao_operacional"
+  descricao: >
+    Assume-se que AvgCH/AvgCD/AvgCA representam o estado do mercado
+    capturado na janela operacional documentada pelo Football-Data.
+    Essa disponibilidade NAO e verificavel individualmente por partida
+    porque a base historica NAO fornece timestamp de fixacao do
+    closing average.
+  natureza: "nao_comprovacao_individual"
+  implicacao: >
+    COMPATIVEL_JANELA_FD significa COMPATIBILIDADE TEMPORAL com a
+    janela documentada do Football-Data, e NAO prova individual de que
+    o closing average estava disponivel no cutoff do Cartola.
+
+regra_comparacao:
+  descricao: >
+    Para cada partida:
+    - ADIADA: partida > 7 dias apos data_min da rodada -> mascarar
+    - FD_INDETERMINADO: dia da partida sem janela FD documentada
+      (segunda, sexta) -> mascarar
+    - RISCO_CUTOFF: fd_ceiling_utc >= cartola_cutoff_utc -> mascarar
+    - COMPATIVEL_JANELA_FD: fd_ceiling_utc < cartola_cutoff_utc ->
+      manter odds sob a assuncao operacional
+  resultado:
+    COMPATIVEL_JANELA_FD: "manter odds sob assuncao operacional"
+    FD_INDETERMINADO:     "mascarar"
+    RISCO_CUTOFF:         "mascarar"
+    ADIADA:               "mascarar"
+
+comportamento_mascara:
+  colunas_mascaradas:
+    - p_home
+    - p_draw
+    - p_away
+    - favoritismo_home_away
+  colunas_preservadas:
+    - mando
+    - clube_canon
+    - adversario_canon
+    - bzzoiro_event_id
+    - tipo_match
+    - motivo_mascara
+
+entregavel:
+  arquivo: data/interim/features_confronto_v1_temporal_safe.parquet
+  sobrescreve: false
+  nota: "features_confronto_v1.parquet original permanece byte-identical"

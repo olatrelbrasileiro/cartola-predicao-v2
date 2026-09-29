@@ -1,0 +1,125 @@
+{
+  "gerado_em": "2026-09-22T08:39:53",
+  "duracao_s": 655.1441113948822,
+  "parquet_sha256": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "parquet_sha_esperado": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "n_observacoes_shap": 23691,
+  "n_folds": 76,
+  "features_com": [
+    "hist_mean",
+    "hist_std",
+    "hist_n",
+    "hist_shrunk_k7",
+    "rec_mean_5",
+    "rec_mean_3",
+    "rec_std_5",
+    "momentum",
+    "basic_mean",
+    "basic_rec_5",
+    "ga_per_game",
+    "ga_rec_5",
+    "ga_shrunk_k7",
+    "entrou_rate",
+    "is_cold_start",
+    "posicao_id",
+    "p_home",
+    "p_draw",
+    "p_away",
+    "mando",
+    "favoritismo_home_away"
+  ],
+  "features_sem": [
+    "hist_mean",
+    "hist_std",
+    "hist_n",
+    "hist_shrunk_k7",
+    "rec_mean_5",
+    "rec_mean_3",
+    "rec_std_5",
+    "momentum",
+    "basic_mean",
+    "basic_rec_5",
+    "ga_per_game",
+    "ga_rec_5",
+    "ga_shrunk_k7",
+    "entrou_rate",
+    "is_cold_start",
+    "posicao_id"
+  ],
+  "grupos": {
+    "historico": [
+      "hist_mean",
+      "hist_std",
+      "hist_n",
+      "hist_shrunk_k7"
+    ],
+    "recente": [
+      "rec_mean_5",
+      "rec_mean_3",
+      "rec_std_5",
+      "momentum"
+    ],
+    "basico_scouts": [
+      "basic_mean",
+      "basic_rec_5"
+    ],
+    "g_a": [
+      "ga_per_game",
+      "ga_rec_5",
+      "ga_shrunk_k7"
+    ],
+    "oportunidade": [
+      "entrou_rate",
+      "is_cold_start"
+    ],
+    "posicao": [
+      "posicao_id"
+    ],
+    "confronto": [
+      "p_home",
+      "p_draw",
+      "p_away",
+      "mando",
+      "favoritismo_home_away"
+    ]
+  },
+  "cat_features": [
+    "posicao_id"
+  ],
+  "catboost_params": {
+    "loss_function": "MAE",
+    "iterations": 500,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 3.0,
+    "random_seed": 42,
+    "thread_count": -1,
+    "verbose": 0,
+    "allow_writing_files": false
+  },
+  "criterios": {
+    "parquet_sha_ok": true,
+    "predicoes_presentes": true,
+    "n_obs_shap_ok": true,
+    "folds_76_ok": true,
+    "shap_com_21_features": true,
+    "shap_sem_16_features": true,
+    "reproducao_predicoes_ok": true,
+    "shap_com_finito": true,
+    "shap_sem_finito": true,
+    "sem_duplicatas_com": true,
+    "sem_duplicatas_sem": true,
+    "participantes_only": true,
+    "posicoes_validas": true,
+    "grupos_cobrem_features_com": true,
+    "grupos_cobrem_features_sem": true,
+    "tempo_ok": true,
+    "artefato_obs_nao_vazio": true,
+    "artefato_fi_nao_vazio": true,
+    "artefato_gi_nao_vazio": true,
+    "artefato_cs_nao_vazio": true,
+    "artefato_md_nao_vazio": true,
+    "sem_feature_selection": true
+  },
+  "resultado": "PASS"
+}

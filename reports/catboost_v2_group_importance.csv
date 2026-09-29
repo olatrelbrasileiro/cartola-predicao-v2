@@ -1,0 +1,8 @@
+grupo,importance_total,features
+Recente,24.380578489079156,"rec_mean_5, rec_mean_3, rec_std_5, momentum"
+Confronto,23.681436192014708,"p_home, p_draw, p_away, mando, favoritismo_home_away"
+Historico,19.64122606799617,"hist_mean, hist_std, hist_n, hist_shrunk_k7"
+Posicao,9.558599782520895,posicao_id
+Basico,9.453467019796404,"basic_mean, basic_rec_5"
+GA,7.933213010053576,"ga_per_game, ga_rec_5, ga_shrunk_k7"
+Oportunidade,5.351479438539095,"entrou_rate, is_cold_start"

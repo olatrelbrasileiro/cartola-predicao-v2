@@ -1,0 +1,32 @@
+# Especificacao oficial do baseline B2S = B2 + shrinkage walk-forward.
+versao: b2s_v1
+data: "2026-09-20"
+status: oficial
+
+definicao:
+  base: "B2 (media das ultimas 5 observacoes do jogador, intra-temporada)"
+  anchor: "mediana de pontos_num no treino do fold"
+  transformacao: "pred_b2s = alpha * pred_b2 + (1 - alpha) * anchor"
+
+calibracao_alpha:
+  metodo: "nested_walk_forward"
+  min_inner_rounds: 3
+  grid:
+    inicio: 0.00
+    fim: 1.00
+    passo: 0.05
+  selecao: "argmin da media dos MAE internos"
+  inner_rounds: "r_i in [min_inner_rounds, R-1], mesma temporada, elegivel"
+
+garantias:
+  - "Nenhuma rodada >= R em qualquer calculo."
+  - "Nenhuma observacao de outra temporada no treino ou calibracao."
+  - "2025/R1 excluida (elegibilidade global)."
+  - "alpha* calibrado apenas em rounds internos de treino."
+  - "Fallback (train_mean_global) entra antes do shrinkage e e comprimido igualmente."
+
+caveats:
+  - >
+    Spearman e preservado matematicamente pela transformacao monotona
+    alpha*p + (1-alpha)*c. Em float64, near-ties podem quebrar e gerar
+    diferencas de ordem 1e-5. Nao afeta MAE nem RMSE.

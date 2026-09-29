@@ -1,0 +1,47 @@
+{
+  "gerado_em": "2026-09-21T13:45:00",
+  "decisao": "KEEP_B2S",
+  "motivo": "criterios centrais nao atendidos",
+  "criterios": {
+    "c1": false,
+    "c2": false,
+    "c3": false,
+    "c4": false,
+    "c5": false
+  },
+  "mae_global_ridge": 2.7873496431047697,
+  "mae_global_b2s": 2.748518514321109,
+  "folds_melhor": 20,
+  "folds_empate": 1,
+  "folds_pior": 55,
+  "mediana_delta": 0.04324513294321464,
+  "por_temporada": [
+    {
+      "temporada": 2024,
+      "n_folds": 29.0,
+      "n_test": 9084.0,
+      "mae_ridge": 2.675411086825183,
+      "mae_b2s": 2.6150374422065217,
+      "delta": 0.060373644618661744,
+      "spearman_ridge": 0.30182791926735736
+    },
+    {
+      "temporada": 2025,
+      "n_folds": 29.0,
+      "n_test": 8881.0,
+      "mae_ridge": 2.8717310885997334,
+      "mae_b2s": 2.8419947797182292,
+      "delta": 0.029736308881503047,
+      "spearman_ridge": 0.3189532279316415
+    },
+    {
+      "temporada": 2026,
+      "n_folds": 18.0,
+      "n_test": 5726.0,
+      "mae_ridge": 2.8340590786274715,
+      "mae_b2s": 2.8152980019384817,
+      "delta": 0.018761076688989558,
+      "spearman_ridge": 0.3190703590333783
+    }
+  ]
+}

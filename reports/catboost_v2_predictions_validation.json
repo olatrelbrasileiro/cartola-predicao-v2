@@ -1,0 +1,15 @@
+{
+  "gerado_em": "2026-09-21T22:12:54",
+  "parquet_sha256": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "parquet_sha_esperado": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "parquet_inalterado": true,
+  "n_folds": 76,
+  "n_observacoes": 23691,
+  "tolerancia": 1e-09,
+  "metricas_checadas": 456,
+  "folds_com_divergencia": 0,
+  "resultado": "PASS",
+  "arquivos_oficiais_sobrescritos": [],
+  "metodo_reproducao": "Reutiliza funcoes oficiais de baselines_p0_corrected.py (precompute_b2_all_rounds, calibrate_alpha_from_precomp) e catboost_v2.py (fit_predict_catboost, FEATURES_COM/SEM, CATBOOST_PARAMS). Nao reimplementa B2S.",
+  "y_pred_catboost_sem_nota": "Saida adicional (ablation COM vs SEM confronto). Nao faz parte da especificacao minima."
+}

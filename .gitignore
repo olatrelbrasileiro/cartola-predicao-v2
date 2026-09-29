@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Relatórios e outputs grandes (opcional - descomente se quiser ignorar)
+# reports/
+# models/
+
+# IDE / sistema
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*\~
+
+# Logs e temporários
+*.log
+*.tmp
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets
+.env
+.env.*
+*.pem
+credentials.json

@@ -1,0 +1,70 @@
+{
+  "gerado_em": "2026-09-21T22:28:37",
+  "parquet_sha256": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "parquet_sha_esperado": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
+  "n_observacoes": 23691,
+  "n_folds": 76,
+  "n_grupos_posicao_rodada": 456,
+  "criterios": {
+    "parquet_sha_ok": true,
+    "folds_76_ok": true,
+    "sem_duplicatas": true,
+    "participantes_only": true,
+    "predicoes_validas": true,
+    "posicoes_validas": true,
+    "mae_por_posicao_ok": true,
+    "spearman_por_posicao_ok": true,
+    "ndcg_por_posicao_ok": true,
+    "comparacao_b2s_mesmo_conjunto_ok": true,
+    "relatorio_gerado": true,
+    "validation_json_gerado": true
+  },
+  "resultado_metricas": "PASS",
+  "resultado_ndcg": "PASS",
+  "ndcg_alertas": {
+    "n_alertas_total": 0,
+    "n_lt_2": 0,
+    "n_idcg_zero": 0,
+    "n_idcg_negativo": 0,
+    "n_ndcg_negativo": 0,
+    "resumo_por_K_modelo": {
+      "K3_catboost": {
+        "n_lt_2": 0,
+        "idcg_zero": 0,
+        "idcg_negativo": 0,
+        "ndcg_negativo": 0
+      },
+      "K3_b2s": {
+        "n_lt_2": 0,
+        "idcg_zero": 0,
+        "idcg_negativo": 0,
+        "ndcg_negativo": 0
+      },
+      "K5_catboost": {
+        "n_lt_2": 0,
+        "idcg_zero": 0,
+        "idcg_negativo": 0,
+        "ndcg_negativo": 0
+      },
+      "K5_b2s": {
+        "n_lt_2": 0,
+        "idcg_zero": 0,
+        "idcg_negativo": 0,
+        "ndcg_negativo": 0
+      },
+      "K7_catboost": {
+        "n_lt_2": 0,
+        "idcg_zero": 0,
+        "idcg_negativo": 0,
+        "ndcg_negativo": 0
+      },
+      "K7_b2s": {
+        "n_lt_2": 0,
+        "idcg_zero": 0,
+        "idcg_negativo": 0,
+        "ndcg_negativo": 0
+      }
+    },
+    "decisao_transformacao_relevancia": "PENDENTE"
+  }
+}

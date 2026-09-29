@@ -1,0 +1,92 @@
+versao: ridge_v2_ablation
+data: "2026-09-21"
+status: especificacao_revisada
+
+objetivo: >
+  Ablacao controlada por grupo de features. Diagnostico do sinal marginal
+  de cada grupo sob o mesmo protocolo temporal do Ridge v2.
+
+base:
+  ridge_v2_script: scripts/ridge_v2.py
+  ridge_v2_spec: config/ridge_v2_spec.yaml
+  full_resultado_oficial: reports/ridge_v2_folds.csv
+  benchmark_externo: reports/baselines_p0_corrected_folds.csv
+  b2s_mae_global: 2.7485
+
+grupos:
+  HIST:  [hist_mean, hist_std, hist_n, hist_shrunk_k7]
+  REC:   [rec_mean_5, rec_mean_3, rec_std_5, momentum]
+  BASIC: [basic_mean, basic_rec_5]
+  GA:    [ga_per_game, ga_rec_5, ga_shrunk_k7]
+  OPP:   [entrou_rate, is_cold_start]
+  POS:   [posicao_1, posicao_2, posicao_3, posicao_4, posicao_5, posicao_6]
+
+experimentos:
+  isolados: [HIST, REC, BASIC, GA, OPP, POS]
+  leave_one_group_out: [FULL_MINUS_HIST, FULL_MINUS_REC, FULL_MINUS_BASIC,
+                         FULL_MINUS_GA, FULL_MINUS_OPP, FULL_MINUS_POS]
+  full:
+    fonte: "le reports/ridge_v2_folds.csv (resultado oficial ja executado)"
+    n_features: 21
+    reexecutar: false
+
+invariantes:
+  harness: reports/harness_folds_v2.csv
+  folds: 76
+  min_inner_rounds: 3
+  grade_alpha: [0.1, 1, 3, 10, 30, 100, 300, 1000]
+  desempate_alpha: "min(alphas, key=lambda a: (inner_mean[a], a))"
+  filtro_participantes: "entrou_em_campo == True"
+  elegibilidade: "2025/R1 excluido"
+  target: pontos_num
+
+preprocessamento:
+  ordem:
+    - "separar features numericas e one-hot do grupo do experimento"
+    - "imputar NaN numericos pela media do treino"
+    - "StandardScaler fit no treino imputado; aplicar em treino e test"
+  onehot: "nao imputar, nao padronizar"
+  proibido:
+    - "usar scaler fit no test"
+    - "usar media envolvendo test"
+
+shrinkage:
+  hist_shrunk_k7: "(n*hist_mean + k*prior_pos)/(n+k), k=7, prior_pos do treino do fold"
+  ga_shrunk_k7:   "(n*ga_rate + k*prior_ga_pos)/(n+k), k=7, prior_ga_pos do treino do fold"
+  cold_start: "NaN antes da imputacao; nao substituir por prior"
+
+metricas:
+  primaria: MAE
+  ponderacao: n_test
+  secundarias: [RMSE, Spearman]
+  delta_mae: "MAE_modelo - MAE_B2S"
+
+agregacoes:
+  - "por experimento (summary)"
+  - "por experimento x temporada (season)"
+
+artefatos:
+  - reports/ridge_v2_ablation_folds.csv
+  - reports/ridge_v2_ablation_summary.csv
+  - reports/ridge_v2_ablation_season.csv
+  - reports/ridge_v2_ablation_selection.csv
+  - reports/ridge_v2_ablation_alphas.csv        # auxiliar de auditoria (L8)
+  - reports/ridge_v2_ablation_validation.json
+
+criterio_de_promocao: null  # esta etapa e' diagnostica; nao ha PROMOTE/KEEP/INCONCLUSIVE
+
+integridade:
+  canonical: "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4"
+  b2s_folds: "b56c6db440d7628acbbc52bb477e1b4fe81ce3fc87610e5aa0452e2110e6a142"
+  harness:   "236b7421ed83860d6921131d708b0508601a8be495ac35f175f91eaefca803a5"
+  p0_folds:  "8b4f61851c227d8ee8c2c76aa38f8c6389656bbb8d1109ee909ccce2d77bb689"
+
+nao_alterar:
+  - scripts/ridge_v2.py
+  - scripts/testar_ridge_v2.py
+  - config/ridge_v2_spec.yaml
+  - data/interim/cartola_jogador_rodada_v2.parquet
+  - reports/baseline_b2s_folds.csv
+  - reports/baselines_p0_corrected_folds.csv
+  - reports/harness_folds_v2.csv
+  - ETAPAS.md

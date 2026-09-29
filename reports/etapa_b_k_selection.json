@@ -1,0 +1,189 @@
+{
+  "gerado_em": "2026-09-21T13:10:09",
+  "grade_avaliada": [
+    0,
+    3,
+    5,
+    7,
+    10,
+    14,
+    20,
+    30
+  ],
+  "k_referencia": 7,
+  "preditor": "hist_shrunk(k) puro; fallback B0 em cold-start",
+  "criterios": {
+    "tolerancia_empate_mae": 0.0001,
+    "min_folds_melhores": 46,
+    "temporadas_obrigatorias": [
+      2024,
+      2025,
+      2026
+    ],
+    "piora_maxima_temporada_pct": 2.0,
+    "mediana_delta_max": 0.0
+  },
+  "por_candidato": {
+    "0": {
+      "mae_pond": 2.858688702476205,
+      "delta_mae_vs_k7": 0.05356043780587294,
+      "spearman_medio": 0.2808272078230707,
+      "folds_melhor": 13,
+      "folds_empate": 0,
+      "folds_pior": 63,
+      "delta_media": 0.053550001888626186,
+      "delta_mediana": 0.056071196231242126,
+      "delta_std": 0.058519772522639575,
+      "por_temporada": {
+        "2024": 2.724673792116398,
+        "2025": 2.9589451124919943,
+        "2026": 2.9157991230766704
+      },
+      "crit1_mae_global": false,
+      "crit2_folds": false,
+      "crit3_temporadas": false,
+      "crit4_piora_max": false,
+      "crit5_mediana": false,
+      "elegivel": false
+    },
+    "3": {
+      "mae_pond": 2.809426985501791,
+      "delta_mae_vs_k7": 0.00429872083145888,
+      "spearman_medio": 0.290608918646247,
+      "folds_melhor": 27,
+      "folds_empate": 0,
+      "folds_pior": 49,
+      "delta_media": 0.0043274079759191226,
+      "delta_mediana": 0.0073527811457374526,
+      "delta_std": 0.01710920274712307,
+      "por_temporada": {
+        "2024": 2.6805762975434786,
+        "2025": 2.9070244960814504,
+        "2026": 2.8624685778796013
+      },
+      "crit1_mae_global": false,
+      "crit2_folds": false,
+      "crit3_temporadas": false,
+      "crit4_piora_max": true,
+      "crit5_mediana": false,
+      "elegivel": false
+    },
+    "5": {
+      "mae_pond": 2.805644574651039,
+      "delta_mae_vs_k7": 0.0005163099807066196,
+      "spearman_medio": 0.2935171876172622,
+      "folds_melhor": 28,
+      "folds_empate": 1,
+      "folds_pior": 47,
+      "delta_media": 0.0005227436200095738,
+      "delta_mediana": 0.0018128963233603468,
+      "delta_std": 0.00698876941218205,
+      "por_temporada": {
+        "2024": 2.6775369658450088,
+        "2025": 2.902538033814502,
+        "2026": 2.85859929130547
+      },
+      "crit1_mae_global": false,
+      "crit2_folds": false,
+      "crit3_temporadas": false,
+      "crit4_piora_max": true,
+      "crit5_mediana": false,
+      "elegivel": false
+    },
+    "10": {
+      "mae_pond": 2.8065562188124193,
+      "delta_mae_vs_k7": 0.0014279541420871844,
+      "spearman_medio": 0.2961385338889741,
+      "folds_melhor": 38,
+      "folds_empate": 2,
+      "folds_pior": 36,
+      "delta_media": 0.0014657754053547874,
+      "delta_mediana": -9.306791921104285e-05,
+      "delta_std": 0.007689941985955655,
+      "por_temporada": {
+        "2024": 2.679064686055001,
+        "2025": 2.902558974684545,
+        "2026": 2.8599150397464115
+      },
+      "crit1_mae_global": false,
+      "crit2_folds": false,
+      "crit3_temporadas": false,
+      "crit4_piora_max": true,
+      "crit5_mediana": true,
+      "elegivel": false
+    },
+    "14": {
+      "mae_pond": 2.8098328592091804,
+      "delta_mae_vs_k7": 0.004704594538848195,
+      "spearman_medio": 0.2951559954476342,
+      "folds_melhor": 32,
+      "folds_empate": 1,
+      "folds_pior": 43,
+      "delta_media": 0.00477722101159584,
+      "delta_mediana": 0.002839516952697796,
+      "delta_std": 0.015124386197895459,
+      "por_temporada": {
+        "2024": 2.6828256449197863,
+        "2025": 2.9051575588660867,
+        "2026": 2.8634749962947335
+      },
+      "crit1_mae_global": false,
+      "crit2_folds": false,
+      "crit3_temporadas": false,
+      "crit4_piora_max": true,
+      "crit5_mediana": false,
+      "elegivel": false
+    },
+    "20": {
+      "mae_pond": 2.8150880158227216,
+      "delta_mae_vs_k7": 0.009959751152389451,
+      "spearman_medio": 0.2920909669226078,
+      "folds_melhor": 31,
+      "folds_empate": 0,
+      "folds_pior": 45,
+      "delta_media": 0.010094382784990915,
+      "delta_mediana": 0.007016518725263099,
+      "delta_std": 0.022856263242763592,
+      "por_temporada": {
+        "2024": 2.6887976889702436,
+        "2025": 2.9095312316509023,
+        "2026": 2.86896002583981
+      },
+      "crit1_mae_global": false,
+      "crit2_folds": false,
+      "crit3_temporadas": false,
+      "crit4_piora_max": true,
+      "crit5_mediana": false,
+      "elegivel": false
+    },
+    "30": {
+      "mae_pond": 2.8229285052821327,
+      "delta_mae_vs_k7": 0.017800240611800522,
+      "spearman_medio": 0.28537339453244703,
+      "folds_melhor": 26,
+      "folds_empate": 0,
+      "folds_pior": 50,
+      "delta_media": 0.018067085266221944,
+      "delta_mediana": 0.014468358048234986,
+      "delta_std": 0.03066839926768408,
+      "por_temporada": {
+        "2024": 2.6972831041262904,
+        "2025": 2.9161228537306942,
+        "2026": 2.877714361993272
+      },
+      "crit1_mae_global": false,
+      "crit2_folds": false,
+      "crit3_temporadas": false,
+      "crit4_piora_max": true,
+      "crit5_mediana": false,
+      "elegivel": false
+    }
+  },
+  "candidatos_elegiveis": [],
+  "decisao": "KEEP_K7",
+  "motivo": "nenhum candidato cumpriu todos os 5 criterios",
+  "detalhes": {
+    "k_referencia_mae_pond": 2.805128264670332,
+    "k_referencia_spearman": 0.29498238716595987
+  }
+}
