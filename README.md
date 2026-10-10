@@ -152,3 +152,13 @@ Se um modelo complexo não supera os baselines, deve ser descartado.
     ├── config.yaml       configuração mínima
     ├── ETAPAS.md         checklist das etapas
     └── README.md         este arquivo
+
+## 🏆 Modelo Oficial de Produção
+
+- **Versão**: CatBoost v3 (com Pooling entre Temporadas).
+- **Baseline**: B2S (corrigido para P0 - avaliação apenas em participantes).
+- **Destaque Goleiros**: O pipeline agora incorpora **features de contexto de time** (via Banco Mestre `team_scout_history`) para a posição de Goleiro, substituindo a dependência excessiva do proxy "Confronto" e melhorando o sinal preditivo (MAE e Spearman).
+
+## 🧹 Estado do Repositório
+- Arquivos legados (v1, baselines pré-P0) foram movidos para `archive/v1_pre_p0/`.
+- O pipeline oficial reside em `scripts/` com sufixo `_v2` ou `_v3`.

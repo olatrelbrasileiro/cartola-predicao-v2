@@ -1,6 +1,6 @@
 # CatBoost pooling cumulativo entre temporadas — ablacao
 
-- Data: 2026-09-22T17:26:41.248118
+- Data: 2026-10-08T20:24:22.999904
 - Pipeline base: `scripts/catboost_v2.py` (importado)
 - Unica divergencia: `tr_all` inclui temporadas < t
 - Features: inalteradas (reset por temporada, atleta_id)

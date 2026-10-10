@@ -1,0 +1,40 @@
+== CatBoost v3 — Com Predições Detalhadas ==
+Início: 2026-10-08T22:06:52
+
+1. Carregando dataset canônico v3...
+   Shape original: (77253, 132)
+   Novas features encontradas no v3: 113
+
+2. Criando coluna elegivel...
+
+3. Processando diffs e scores básicos...
+4. Computando features de participação...
+5. Merge com features de confronto...
+6. Merge com novas features...
+
+7. Folds: 76
+
+8. Iniciando treino walk-forward...
+   fold 10/76: 2024/R19 n_tr=5512 n_te=200 MAE=2.4427 SP=0.4282
+   fold 20/76: 2024/R29 n_tr=8709 n_te=340 MAE=2.7135 SP=0.2979
+   fold 30/76: 2025/R10 n_tr=14414 n_te=301 MAE=2.4842 SP=0.3459
+   fold 40/76: 2025/R20 n_tr=17285 n_te=333 MAE=2.8659 SP=0.2191
+   fold 50/76: 2025/R30 n_tr=20600 n_te=334 MAE=2.7304 SP=0.3536
+   fold 60/76: 2026/R11 n_tr=26423 n_te=332 MAE=2.4549 SP=0.3970
+   fold 70/76: 2026/R21 n_tr=29636 n_te=204 MAE=2.6038 SP=0.4387
+
+=================================================================
+RESULTADOS FINAIS — CatBoost v3
+=================================================================
+MAE global:     2.6256
+RMSE global:    3.7372
+Spearman médio: 0.3430
+Tempo total:    0:27:36.798421
+=================================================================
+
+Artefatos salvos:
+  /data/data/com.termux/files/home/cartola-predicao-v2/reports/catboost_v3_folds.csv
+  /data/data/com.termux/files/home/cartola-predicao-v2/reports/catboost_v3_feature_importance.csv
+  /data/data/com.termux/files/home/cartola-predicao-v2/reports/catboost_v3_group_importance.csv
+  /data/data/com.termux/files/home/cartola-predicao-v2/reports/catboost_v3_predicoes_detalhadas.csv (NOVO - 23691 predições)
+  /data/data/com.termux/files/home/cartola-predicao-v2/reports/catboost_v3_summary.md

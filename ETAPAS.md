@@ -266,3 +266,7 @@ Foram validadas as 20 features de contexto:
 
 ### Próxima etapa
 Integrar as 20 features F2 ao experimento de previsão e comparar contra o CatBoost v2 oficial usando o mesmo protocolo temporal e avaliação walk-forward, sem alterar o baseline oficial.
+
+
+### Em Andamento / Validação
+- **EXP-11**: Validação de features de goleiro com Banco Mestre (team_scout_history) para substituir proxy de Confronto.

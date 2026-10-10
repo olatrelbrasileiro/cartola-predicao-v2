@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-22T17:26:41.248118",
+  "timestamp": "2026-10-08T20:24:22.999904",
   "modo": "import-based pooling cumulativo",
-  "catboost_v2_importado": "/workspaces/cartola-predicao-v2/scripts/catboost_v2.py",
+  "catboost_v2_importado": "/data/data/com.termux/files/home/cartola-predicao-v2/scripts/catboost_v2.py",
   "hash_canonical": "15be1a317afb940c4ffc0ad0758a034ef0a8438637d58b75265620b47db88db4",
   "hash_harness": "236b7421ed83860d6921131d708b0508601a8be495ac35f175f91eaefca803a5",
   "hash_p0_folds": "8b4f61851c227d8ee8c2c76aa38f8c6389656bbb8d1109ee909ccce2d77bb689",
